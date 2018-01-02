@@ -6,13 +6,18 @@ export default {
       type: Number,
       default: 24
     },
+    tag: {
+      type: String,
+      default: 'div'
+    },
     offset: Number,
     pull: Number,
     push: Number,
     xs: [Number, Object],
     sm: [Number, Object],
     md: [Number, Object],
-    lg: [Number, Object]
+    lg: [Number, Object],
+    xl: [Number, Object]
   },
 
   computed: {
@@ -34,7 +39,7 @@ export default {
     }
 
     ['span', 'offset', 'pull', 'push'].forEach(prop => {
-      if (this[prop]) {
+      if (this[prop] || this[prop] === 0) {
         classList.push(
           prop !== 'span'
           ? `el-col-${prop}-${this[prop]}`
@@ -43,7 +48,7 @@ export default {
       }
     });
 
-    ['xs', 'sm', 'md', 'lg'].forEach(size => {
+    ['xs', 'sm', 'md', 'lg', 'xl'].forEach(size => {
       if (typeof this[size] === 'number') {
         classList.push(`el-col-${size}-${this[size]}`);
       } else if (typeof this[size] === 'object') {
@@ -58,12 +63,9 @@ export default {
       }
     });
 
-    return (
-      <div
-        class={['el-col', classList]}
-        style={style}>
-        {this.$slots.default}
-      </div>
-    );
+    return h(this.tag, {
+      class: ['el-col', classList],
+      style
+    }, this.$slots.default);
   }
 };

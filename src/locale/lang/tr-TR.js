@@ -1,7 +1,7 @@
 export default {
   el: {
     colorpicker: {
-      confirm: 'OK',
+      confirm: 'Onayla',
       clear: 'Temizle'
     },
     datepicker: {
@@ -9,13 +9,17 @@ export default {
       today: 'Bugün',
       cancel: 'İptal',
       clear: 'Temizle',
-      confirm: 'OK',
+      confirm: 'Onayla',
       selectDate: 'Tarih seç',
       selectTime: 'Saat seç',
       startDate: 'Başlangıç Tarihi',
       startTime: 'Başlangıç Saati',
       endDate: 'Bitiş Tarihi',
       endTime: 'Bitiş Saati',
+      prevYear: 'Previous Year', // to be translated
+      nextYear: 'Next Year', // to be translated
+      prevMonth: 'Previous Month', // to be translated
+      nextMonth: 'Next Month', // to be translated
       year: '',
       month1: 'Ocak',
       month2: 'Şubat',
@@ -62,6 +66,7 @@ export default {
     },
     cascader: {
       noMatch: 'Eşleşen veri bulunamadı',
+      loading: 'Yükleniyor',
       placeholder: 'Seç'
     },
     pagination: {
@@ -72,11 +77,12 @@ export default {
     },
     messagebox: {
       title: 'Mesaj',
-      confirm: 'OK',
+      confirm: 'Onayla',
       cancel: 'İptal',
       error: 'İllegal giriş'
     },
     upload: {
+      deleteTip: 'press delete to remove', // to be translated
       delete: 'Sil',
       preview: 'Görüntüle',
       continue: 'Devam'
@@ -84,9 +90,9 @@ export default {
     table: {
       emptyText: 'Veri yok',
       confirmFilter: 'Onayla',
-      resetFilter: 'Reset',
+      resetFilter: 'Sıfırla',
       clearFilter: 'Hepsi',
-      sumText: 'Sum' // to be translated
+      sumText: 'Sum'
     },
     tree: {
       emptyText: 'Veri yok'
@@ -94,10 +100,10 @@ export default {
     transfer: {
       noMatch: 'Eşleşen veri bulunamadı',
       noData: 'Veri yok',
-      titles: ['List 1', 'List 2'], // to be translated
-      filterPlaceholder: 'Enter keyword', // to be translated
-      noCheckedFormat: '{total} items', // to be translated
-      hasCheckedFormat: '{checked}/{total} checked' // to be translated
+      titles: ['Liste 1', 'Liste 2'],
+      filterPlaceholder: 'Anahtar kelimeleri gir',
+      noCheckedFormat: '{total} adet',
+      hasCheckedFormat: '{checked}/{total} seçildi'
     }
   }
 };
